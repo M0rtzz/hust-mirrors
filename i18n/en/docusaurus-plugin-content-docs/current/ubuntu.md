@@ -31,13 +31,18 @@ deb ${_http}://${_domain}/ubuntu/ ${version} main restricted universe multiverse
 ${SRC_PREFIX}deb-src ${_http}://${_domain}/ubuntu/ ${version} main restricted universe multiverse
 deb ${_http}://${_domain}/ubuntu/ ${version}-updates main restricted universe multiverse
 ${SRC_PREFIX}deb-src ${_http}://${_domain}/ubuntu/ ${version}-updates main restricted universe multiverse
+deb ${_http}://${_domain}/ubuntu/ ${version}-backports main restricted universe multiverse
+${SRC_PREFIX}deb-src ${_http}://${_domain}/ubuntu/ ${version}-backports main restricted universe multiverse
+
+deb ${_http}://${_domain}/ubuntu/ ${version}-security main restricted universe multiverse
+${SRC_PREFIX}deb-src ${_http}://${_domain}/ubuntu/ ${version}-security main restricted universe multiverse
 
 ${PROPOSED_PREFIX}deb ${_http}://${_domain}/ubuntu/ ${version}-proposed main restricted universe multiverse
 ${PROPOSED_PREFIX || SRC_PREFIX}deb-src ${_http}://${_domain}/ubuntu/ ${version}-proposed main restricted universe multiverse
 ```
 
 
-1. Update the software using the following command:
+2. Update the software using the following command:
 
 ```shell varcode
 [ ] (root) Are you the root user?
